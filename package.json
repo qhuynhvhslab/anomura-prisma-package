@@ -1,6 +1,6 @@
 {
-    "name": "@qhuynhvhslab/anomura-prisma-package",
-    "version": "1.0.3",
+    "name": "anomura-prisma-package",
+    "version": "1.0.4",
     "scripts": {
         "db:introspect": "dotenv -- prisma introspect",
         "db:generate": "dotenv -- prisma generate",
