@@ -1,6 +1,6 @@
 {
     "name": "@qhuynhvhslab/anomura-prisma-package",
-    "version": "1.0.13",
+    "version": "1.0.14",
     "main": "dist/index.js",
     "types": "dist/index.d.ts",
     "repository": {
@@ -8,7 +8,7 @@
         "url": "git://github.com/qhuynhvhslab/anomura-prisma-package.git"
       },
     "scripts": {
-        "prepare": "npx prisma generate && tsc && cp src/index.d.ts dist/index.d.ts"
+        "postinstall": "npx prisma generate && tsc && cp src/index.d.ts dist/index.d.ts"
     },
     "dependencies": {
         "@prisma/client": "^3.9.1"
