@@ -1,14 +1,12 @@
 {
     "name": "@qhuynhvhslab/anomura-prisma-package",
-    "version": "1.0.5",
+    "version": "1.0.6",
     "repository": {
         "type": "git",
         "url": "git://github.com/qhuynhvhslab/anomura-prisma-package.git"
       },
     "scripts": {
-        "db:introspect": "dotenv -- prisma introspect",
-        "db:generate": "dotenv -- prisma generate",
-        "postinstall": "tsc && cp src/index.d.ts dist/index.d.ts && npx prisma generate"
+        "prepare": "npx prisma generate && tsc && cp src/index.d.ts dist/index.d.ts"
     },
     "dependencies": {
         "@prisma/client": "^3.9.1"
