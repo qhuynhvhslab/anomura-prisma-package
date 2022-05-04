@@ -1,5 +1,8 @@
 {
+    "name": "@qhuynhvhslab/anomura-prisma-package",
     "scripts": {
+        "db:introspect": "dotenv -- prisma introspect",
+        "db:generate": "dotenv -- prisma generate",
         "postinstall": "tsc && cp src/index.d.ts dist/index.d.ts && npx prisma generate"
     },
     "dependencies": {
