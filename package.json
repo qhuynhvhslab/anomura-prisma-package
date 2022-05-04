@@ -1,6 +1,10 @@
 {
-    "name": "anomura-prisma-package",
+    "name": "@qhuynhvhslab/anomura-prisma-package",
     "version": "1.0.5",
+    "repository": {
+        "type": "git",
+        "url": "git://github.com/qhuynhvhslab/anomura-prisma-package.git"
+      },
     "scripts": {
         "db:introspect": "dotenv -- prisma introspect",
         "db:generate": "dotenv -- prisma generate",
@@ -19,7 +23,5 @@
     "bundledDependencies": [
         "@prisma/client",
         ".prisma"
-    ], "publishConfig": {
-        "@qhuynhvhslab:registry": "https://npm.pkg.github.com"
-      }
+    ], "publishConfig": { "registry": "https://npm.pkg.github.com/" }
 }
