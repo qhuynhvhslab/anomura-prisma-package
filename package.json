@@ -19,5 +19,7 @@
     "bundledDependencies": [
         "@prisma/client",
         ".prisma"
-    ]
+    ], "publishConfig": {
+        "@qhuynhvhslab:registry": "https://npm.pkg.github.com"
+      }
 }
