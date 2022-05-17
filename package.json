@@ -1,6 +1,6 @@
 {
     "name": "@qhuynhvhslab/anomura-prisma-package",
-    "version": "1.0.21",
+    "version": "1.0.22",
     "main": "dist/index.js",
     "types": "dist/index.d.ts",
     "repository": {
@@ -9,7 +9,7 @@
       },
     "scripts": {
         "prepare": "npx prisma generate && tsc && cp src/index.d.ts dist/index.d.ts",
-        "postinstall": "prisma generate",
+        "postinstall": "npx prisma generate",
         "prisma:generate": "prisma generate"
     },
     "dependencies": {
