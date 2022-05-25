@@ -68,17 +68,17 @@ model QuestType {
 }
 
 model UserQuest {
-  id                        Int         @id @default(autoincrement())
-  wallet                    String
-  questId                   String      @default(uuid())
-  extendedUserQuestData     Json?
-  createdAt                 DateTime    @default(now())
-  rewardedQty               Int?
-  rewardedTypeId            Int?
-  quest                     Quest       @relation(fields: [questId], references: [questId])
-  rewardType                RewardType? @relation(fields: [rewardedTypeId], references: [id])
-  user                      WhiteList   @relation(fields: [wallet], references: [wallet])
-
+  id                        Int           @id @default(autoincrement())
+  wallet                    String  
+  questId                   String        @default(uuid())
+  extendedUserQuestData     Json? 
+  createdAt                 DateTime      @default(now())
+  rewardedQty               Int?  
+  rewardedTypeId            Int?  
+  quest                     Quest         @relation(fields: [questId], references: [questId])
+  rewardType                RewardType?   @relation(fields: [rewardedTypeId], references: [id])
+  user                      WhiteList     @relation(fields: [wallet], references: [wallet])
+  updatedAt                 DateTime      @default(now()) @updatedAt
   @@unique([wallet, questId])
 }
 
