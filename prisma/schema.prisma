@@ -91,6 +91,7 @@ model Quest {
   quantity              Int             @default(0)
   isEnabled             Boolean         @default(true)
   isRequired            Boolean         @default(false)
+  isDeleted             Boolean         @default(false)
   description           String?         @default("")
   extendedQuestData     Json?   
   questId               String          @unique @default(uuid())
