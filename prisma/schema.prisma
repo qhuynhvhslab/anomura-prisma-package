@@ -158,6 +158,6 @@ model Players {
 
 model AnomuraPartImage {
     id     Int        @id @default(autoincrement())
-    name   String?
+    name   String?    @unique
     url    String?
 }
