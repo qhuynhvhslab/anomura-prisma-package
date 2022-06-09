@@ -1,8 +1,8 @@
-const { PrismaClient } = require("@prisma/client");
+const { PrismaClient, EquipmentType } = require("@prisma/client");
 const { faker } = require("@faker-js/faker");
 
 const prisma = new PrismaClient();
-const CryptoJS = require("crypto-js");
+// const CryptoJS = require("crypto-js");
 
 const adminAddresses = [
     "0x4D6EAEd5a1d1E631bbB6B3b4c6bedc4251d2DDF6",
@@ -19,6 +19,8 @@ async function main() {
     // await prisma.reward.deleteMany();
     // await prisma.whiteList.deleteMany();
     console.log("Seeding prisma admin db");
+    console.log(EquipmentType);
+    return;
 
     for (let i = 0; i < adminAddresses.length; i++) {
         const nonce = CryptoJS.lib.WordArray.random(16).toString();
