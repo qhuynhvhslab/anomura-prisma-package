@@ -155,3 +155,9 @@ model Players {
   ownedAnomuras   Anomuras[]
   ownedEquipment  AnomuraEquipment[]
 }
+
+model AnomuraPartImage {
+    id     Int        @id @default(autoincrement())
+    name   String?
+    url    String?
+}
