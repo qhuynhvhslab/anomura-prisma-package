@@ -142,8 +142,11 @@ model AnomuraEquipment {
 }
 
 enum EquipmentType {
-  SOULBOUND
-  NFT
+  CLAWS
+  LEGS
+  BODY
+  SHELL
+  HEADPIECES
 }
 
 model Players {
