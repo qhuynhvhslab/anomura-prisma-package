@@ -133,7 +133,7 @@ model AnomuraEquipment {
   image               String              @default("")
   type                EquipmentType 
   isEquipped          Boolean             @default(false)
-  equipToAnomura      Int?                @default(0)
+  equipToAnomura      Int?                
   playersWallet       String?
   Players             Players?            @relation(fields: [playersWallet], references: [wallet])
   anomura             Anomuras?           @relation(fields: [equipToAnomura], references: [crabId])
