@@ -4,6 +4,7 @@ dotenv -e .env.development -- npx prisma migrate dev --name postgres-init
 npx prisma format
 
 locally to apply on production:
+dotenv -e .env.staging -- npx prisma migrate deploy
 dotenv -e .env.production -- npx prisma migrate deploy
 
 

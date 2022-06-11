@@ -122,23 +122,24 @@ model Anomuras {
   headpieces            String?           @default("")
   Players               Players?          @relation(fields: [playersWallet], references: [wallet])
   anomuraEquipments     AnomuraEquipment[]
-  createdAt           DateTime            @default(now())
-  updatedAt           DateTime            @default(now()) @updatedAt
+  createdAt             DateTime            @default(now())
+  updatedAt             DateTime            @default(now()) @updatedAt
 }
 
 model AnomuraEquipment {
-  id                  Int                 @id @default(autoincrement())
-  equipmentId         Int                 @unique
-  name                String
-  image               String              @default("")
-  type                EquipmentType 
-  isEquipped          Boolean             @default(false)
-  equipToAnomura      Int?                
-  playersWallet       String?
-  Players             Players?            @relation(fields: [playersWallet], references: [wallet])
-  anomura             Anomuras?           @relation(fields: [equipToAnomura], references: [crabId])
-  createdAt           DateTime            @default(now())
-  updatedAt           DateTime            @default(now()) @updatedAt
+  id                    Int                 @id @default(autoincrement())
+  equipmentId           Int                 @unique
+  name                  String
+  image                 String              @default("")
+  type                  EquipmentType 
+  isEquipped            Boolean             @default(false)
+  equipToAnomura        Int?                
+  playersWallet         String?
+  Players               Players?            @relation(fields: [playersWallet], references: [wallet])
+  anomura               Anomuras?           @relation(fields: [equipToAnomura], references: [crabId])
+  createdAt             DateTime            @default(now())
+  updatedAt             DateTime            @default(now()) @updatedAt
+  lastUpdatedAtBlock    Int?
 }
 
 enum EquipmentType {
