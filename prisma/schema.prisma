@@ -169,6 +169,7 @@ model AnomuraEquipmentContractLog {
     address             String
     eventName           String
     blockNumber         Int
+    transactionHash     String
     data                Json?
     createdAt           DateTime            @default(now())
     updatedAt           DateTime            @default(now()) @updatedAt
@@ -180,6 +181,7 @@ model AnomuraContractLog {
     address             String
     eventName           String
     blockNumber         Int
+    transactionHash     String
     data                Json?
     createdAt           DateTime            @default(now())
     updatedAt           DateTime            @default(now()) @updatedAt
