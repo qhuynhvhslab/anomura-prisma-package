@@ -162,3 +162,25 @@ model AnomuraPartImage {
     name   String?    @unique
     url    String?
 }
+
+
+model AnomuraEquipmentContractLog {
+    id                  Int                 @id @default(autoincrement())
+    address             String
+    eventName           String
+    blockNumber         Int
+    data                Json?
+    createdAt           DateTime            @default(now())
+    updatedAt           DateTime            @default(now()) @updatedAt
+
+}
+
+model AnomuraContractLog {
+    id                  Int                 @id @default(autoincrement())
+    address             String
+    eventName           String
+    blockNumber         Int
+    data                Json?
+    createdAt           DateTime            @default(now())
+    updatedAt           DateTime            @default(now()) @updatedAt
+}
