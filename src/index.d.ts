@@ -5,4 +5,4 @@ export interface Context {
   equipmentType: any;
 }
 
-export function createContext(): Promise<Context>;
+export function createContext(): Context;

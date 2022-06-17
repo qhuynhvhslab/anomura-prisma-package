@@ -14,5 +14,5 @@ let equipmentType = {
 // let equipmentType:EquipmentType = EquipmentType;
 
 
-export const createContext = async (): Promise<Context> => ({ prisma, equipmentType });
+export const createContext = (): Context => ({ prisma, equipmentType });
 
