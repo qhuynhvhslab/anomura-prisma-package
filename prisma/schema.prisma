@@ -22,6 +22,14 @@ model WhiteList {
   rewards                       Reward[]
   userQuest                     UserQuest[]
   nonce                         String?
+  whiteListUserData             WhiteListUserData[]
+}
+
+model WhiteListUserData {
+  id           Int           @id @default(autoincrement())
+  userId       String
+  user         WhiteList     @relation(fields: [userId], references: [userId])
+  data         Json? 
 }
 
 model PendingReward {
