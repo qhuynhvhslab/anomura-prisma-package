@@ -22,7 +22,7 @@ model WhiteList {
   rewards                       Reward[]
   userQuest                     UserQuest[]
   nonce                         String?
-  whiteListUserData             WhiteListUserData[]
+  whiteListUserData             WhiteListUserData?
 }
 
 model WhiteListUserData {
