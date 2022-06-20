@@ -199,7 +199,7 @@ model AnomuraContractLog {
 
 model MoralisNftData {
   id                  Int                 @id @default(autoincrement())
-  contractAddress     String
+  contractAddress     String              @unique
   contractData        Json?
   createdAt           DateTime            @default(now())
   updatedAt           DateTime            @default(now()) @updatedAt
