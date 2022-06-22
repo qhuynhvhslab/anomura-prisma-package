@@ -219,3 +219,12 @@ model EarlyListAddress {
     id                Int                 @id @default(autoincrement())
     wallet            String              @unique
 }
+
+model LogError {
+    id                Int                 @id @default(autoincrement())
+    url               String
+    referer           String?
+    userAgent         String?
+    message           String?
+    createdAt         DateTime            @default(now())
+}
