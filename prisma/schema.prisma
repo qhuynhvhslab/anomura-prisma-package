@@ -204,3 +204,18 @@ model MoralisNftData {
   createdAt           DateTime            @default(now())
   updatedAt           DateTime            @default(now()) @updatedAt
 }
+
+model TeamAddress {
+    id                Int                 @id @default(autoincrement())
+    wallet            String              @unique
+}
+
+model WhiteListAddress {
+    id                Int                 @id @default(autoincrement())
+    wallet            String              @unique
+}
+
+model EarlyListAddress {
+    id                Int                 @id @default(autoincrement())
+    wallet            String              @unique
+}
