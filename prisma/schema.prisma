@@ -205,7 +205,7 @@ model MoralisNftData {
   updatedAt           DateTime            @default(now()) @updatedAt
 }
 
-model TeamAddress {
+model TeamListAddress {
     id                Int                 @id @default(autoincrement())
     wallet            String              @unique
 }
