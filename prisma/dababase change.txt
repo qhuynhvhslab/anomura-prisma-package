@@ -50,3 +50,10 @@ on dev
 + dotenv -e .env.staging -- npx prisma migrate resolve --applied "20220426034248_new_migration_history"
 + dotenv -e .env.production -- npx prisma migrate deploy
 
+
+// Fixing contrainst Id when adding manually
+
+https://github.com/prisma/prisma/discussions/5256
+
+SELECT setval(pg_get_serial_sequence('"Orders"', 'id'), coalesce(max(id)+1, 1), false) FROM "Orders";
+
