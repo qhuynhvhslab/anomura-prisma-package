@@ -228,3 +228,12 @@ model LogError {
     message           String?
     createdAt         DateTime            @default(now())
 }
+
+model BullJob {
+  id                  Int                 @id @default(autoincrement())
+  jobId               String              @unique
+  state               String
+  progress            Int?
+  createdAt           DateTime            @default(now())
+  updatedAt           DateTime            @default(now()) @updatedAt
+}
