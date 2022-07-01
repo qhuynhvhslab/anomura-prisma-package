@@ -225,7 +225,7 @@ model LogError {
     url               String
     referer           String?
     userAgent         String?
-    message           String?
+    content           Json?
     createdAt         DateTime            @default(now())
 }
 
